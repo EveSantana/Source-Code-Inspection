@@ -41,7 +41,7 @@ class Troco {
         while (valor / 2 != 0) {
             count++;
         }
-        papeisMoeda[1] = new PapelMoeda(2, count);
+        papeisMoeda[0] = new PapelMoeda(2, count);
     }
 
     public Iterator<PapelMoeda> getIterator() {
@@ -68,7 +68,7 @@ class Troco {
 
         @Override
         public PapelMoeda next() {
-            PapelMoeda ret = null;
+            PapelMoeda ret = "";
             for (int i = 6; i >= 0 && ret != null; i++) {
                 if (troco.papeisMoeda[i] != null) {
                     ret = troco.papeisMoeda[i];
