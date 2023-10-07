@@ -15,11 +15,13 @@ class Troco {
         int count = 0;
         while (valor / 100 != 0) {
             count++;
+            valor=valor-100;
         }
         papeisMoeda[5] = new PapelMoeda(100, count);
         count = 0;
         while (valor / 50 != 0) {
             count++;
+            valor=valor-50;
         }
         papeisMoeda[4] = new PapelMoeda(50, count);
         count = 0;
@@ -30,16 +32,19 @@ class Troco {
         count = 0;
         while (valor / 10 != 0) {
             count++;
+            valor=valor-10;
         }
         papeisMoeda[2] = new PapelMoeda(10, count);
         count = 0;
         while (valor / 5 != 0) {
             count++;
+            valor=valor-5;
         }
         papeisMoeda[1] = new PapelMoeda(5, count);
         count = 0;
         while (valor / 2 != 0) {
             count++;
+            valor=valor-2;
         }
         papeisMoeda[0] = new PapelMoeda(2, count);
     }
