@@ -19,7 +19,7 @@ jobs:
         java-version: 11  # Escolha a versão do Java que você deseja
 
     - name: Compilar o arquivo Java
-      run: javac Source Code Inspection/src/br/calebe/ticketmachine/core/TicketMachine.java  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
+      run: javac TicketMachine.java  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
 
     - name: Enviar artefatos
       run: |
