@@ -1,0 +1,34 @@
+name: main
+
+on:
+  push:
+    branches:
+      - master  # Substitua "main" pelo nome da sua branch principal, se necessário
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Você pode escolher outro sistema operacional, se preferir
+
+    steps:
+    - name: Checkout do repositório
+      uses: actions/checkout@v2
+
+    - name: Configurar o JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: 11  # Escolha a versão do Java que você deseja
+
+    - name: Compilar o arquivo Java
+      run: javac Source Code Inspection/src/br/calebe/ticketmachine/core/TicketMachine.java  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
+
+    - name: Enviar artefatos
+      run: |
+        mkdir -p compiled
+        mv *.class compiled/
+      continue-on-error: true
+
+    - name: Enviar artefatos para o GitHub
+      uses: actions/upload-artifact@v2
+      with:
+        name: java-compiled
+        path: compiled
