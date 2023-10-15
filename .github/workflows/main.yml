@@ -18,7 +18,11 @@ jobs:
       with:
         distribution: 'temurin' # See 'Supported distributions' for available options
         java-version: '17'
-
+    - name: Debug Info
+      run: |
+        ls -la
+        pwd
+        echo $GITHUB_WORKSPACE
     - name: Compilar o arquivo Java
       run: javac EveSantana/Source-Code-Inspection/Source-Code-Inspection/src/br/calebe/ticketmachine/core/TicketMachine.java  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
 
