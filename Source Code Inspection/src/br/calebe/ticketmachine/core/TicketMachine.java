@@ -37,7 +37,7 @@ public class TicketMachine {
     }
 
     public int getTroco() {
-        int troco= this.valor-this.saldo
+        int troco= this.valor-this.saldo;
         return troco;
     }
 
