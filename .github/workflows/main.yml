@@ -16,7 +16,8 @@ jobs:
     - name: Configurar o JDK
       uses: actions/setup-java@v3
       with:
-        java-version: 11  # Escolha a versão do Java que você deseja
+        distribution: 'temurin' # See 'Supported distributions' for available options
+        java-version: '17'
 
     - name: Compilar o arquivo Java
       run: javac TicketMachine.java  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
