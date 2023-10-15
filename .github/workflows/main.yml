@@ -26,7 +26,7 @@ jobs:
     - name: Sair do diretório e voltar para a raiz
       run: cd ..
     - name: Compilar o arquivo Java
-      run: javac EveSantana/Source-Code-Inspection/Source-Code-Inspection/src/br/calebe/ticketmachine/core/TicketMachine.java  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
+      run: javac "Source Code Inspection/src/br/calebe/ticketmachine/core/TicketMachine.java"  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
 
     - name: Enviar artefatos
       run: |
