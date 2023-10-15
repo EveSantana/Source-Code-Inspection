@@ -20,7 +20,7 @@ jobs:
         java-version: '17'
 
     - name: Compilar o arquivo Java
-      run: javac home/runner/work/Source-Code-Inspection/Source-Code-Inspection/src/br/calebe/ticketmachine/core/TicketMachine.java  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
+      run: javac EveSantana/Source-Code-Inspection/Source-Code-Inspection/src/br/calebe/ticketmachine/core/TicketMachine.java  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
 
     - name: Enviar artefatos
       run: |
