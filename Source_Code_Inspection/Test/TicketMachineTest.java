@@ -1,4 +1,4 @@
-import Source_Code_Inspection.src.br.calebe.ticketmachine.core.TicketMachine;
+package br.calebe.ticketmachine.core;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
