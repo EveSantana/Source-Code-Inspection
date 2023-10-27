@@ -1,6 +1,6 @@
 package br.calebe.ticketmachine.core;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Assertions;
 public class TicketMachineTest {
  
   @Test  
