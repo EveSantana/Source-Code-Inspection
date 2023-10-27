@@ -40,6 +40,9 @@ jobs:
         name: java-compiled
         path: compiled
 
+    - name: Copy JUnit JAR to the workspace
+      run: cp "lib/junit-4.13.2-javadoc.jar"
+    
     - name: Compile
       run: javac -cp .:"lib/junit-4.13.2-javadoc.jar" "Source Code Inspection/Test/TicketMachineTest.java"
 
