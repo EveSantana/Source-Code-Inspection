@@ -1,4 +1,4 @@
-package br.calebe.ticketmachine.core;
+import br.calebe.ticketmachine.core;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
