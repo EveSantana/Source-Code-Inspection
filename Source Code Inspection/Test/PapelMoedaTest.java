@@ -1,4 +1,4 @@
-package br.calebe.ticketmachine.core;
+import br.calebe.ticketmachine.core.TicketMachine;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 public class PapelMoedaTest {
