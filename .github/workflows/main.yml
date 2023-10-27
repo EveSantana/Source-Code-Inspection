@@ -40,8 +40,9 @@ jobs:
         name: java-compiled
         path: compiled
     
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    - name: Compile
+      run: javac -cp .:junit-platform-console-standalone-1.8.2.jar TicketMachineTest.java
+      # Certifique-se de substituir "YourTestClass.java" pelo nome do seu arquivo de teste e ajuste o nome do arquivo JAR do JUnit.
 
     - name: Run Unit Tests
-      run: mvn test
+      run: java -jar junit-platform-console-standalone-1.8.2.jar --class-path . --scan-class-path
