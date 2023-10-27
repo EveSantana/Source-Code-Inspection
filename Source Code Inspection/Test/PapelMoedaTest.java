@@ -1,4 +1,4 @@
-import br.calebe.ticketmachine.core.TicketMachine;
+import Source Code Inspection.src.br.calebe.ticketmachine.core.TicketMachine;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 public class PapelMoedaTest {
