@@ -26,7 +26,7 @@ jobs:
     - name: Sair do diretório e voltar para a raiz
       run: cd ..
     - name: Compilar o arquivo Java
-      run: javac "Source_Code_Inspection/src/br/calebe/ticketmachine/core/TicketMachine.java"  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
+      run: javac "Codigo/src/br/calebe/ticketmachine/core/TicketMachine.java"  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
 
     - name: Enviar artefatos
       run: |
@@ -44,7 +44,7 @@ jobs:
       run: cp "lib/junit-4.13.2.jar" .
     
     - name: Compile
-      run: javac -cp .:lib/junit-4.13.2.jar "Source_Code_Inspection/Test/TicketMachineTest.java"
+      run: javac -cp .:lib/junit-4.13.2.jar "Codigo/Test/TicketMachineTest.java"
 
     - name: Run Unit Tests
       run: java -cp .:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TicketMachineTest
