@@ -39,10 +39,11 @@ jobs:
       with:
         name: java-compiled
         path: compiled
-    
+
     - name: Compile
-      run: javac -cp .:junit-platform-console-standalone-1.8.2.jar "Source Code Inspection/Test/TicketMachineTest.java"
-      # Certifique-se de substituir "YourTestClass.java" pelo nome do seu arquivo de teste e ajuste o nome do arquivo JAR do JUnit.
+      run: javac -cp .:lib/junit-4.13.2-javadoc.jar TicketMachineTest.java
 
     - name: Run Unit Tests
-      run: java -jar junit-platform-console-standalone-1.8.2.jar --class-path . --scan-class-path
+      run: java -cp .:libs/junit-4.12.jar org.junit.runner.JUnitCore Test
+
+  
