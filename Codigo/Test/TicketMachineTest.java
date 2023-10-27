@@ -14,8 +14,8 @@ public class TicketMachineTest {
  
  int valor=0; 
  
- TicketMachine ticketmachine  =new TicketMachine( valor); 
-ticketmachine.inserir( nota);
+ TicketMachine ticketmachine  =new TicketMachine(valor); 
+ticketmachine.inserir(nota);
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}
