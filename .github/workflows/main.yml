@@ -44,6 +44,6 @@ jobs:
       run: javac -cp .:"lib/junit-4.13.2-javadoc.jar" "Source Code Inspection/Test/TicketMachineTest.java"
 
     - name: Run Unit Tests
-      run: java -cp .:libs/junit-4.12.jar org.junit.runner.JUnitCore Test
+      run: java -cp .:"lib/junit-4.13.2-javadoc.jar" org.junit.runner.JUnitCore Test
 
   
