@@ -32,7 +32,7 @@ jobs:
       run: |
         mkdir -p compiled
         mv *.class compiled/
-      continue-on-error: true
+      continue-on-error: false
 
     - name: Enviar artefatos para o GitHub
       uses: actions/upload-artifact@v2
