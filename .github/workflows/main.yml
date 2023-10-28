@@ -45,8 +45,14 @@ jobs:
 
     - name: Sair do diretório e voltar para a raiz
       run: cd ..
+
+    - name: Debug Info2
+      run: |
+        ls -la
+        pwd
+        echo $GITHUB_WORKSPACE
     - name: Compile
-      run: javac -cp .:lib/junit-4.13.2.jar "Test/TicketMachineTest.java"
+      run: javac -cp .:lib/junit-4.13.2.jar "Codigo/src/Test/TicketMachineTest.java"
 
     - name: Run Unit Tests
       run: java -cp .:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TicketMachineTest
