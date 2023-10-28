@@ -44,7 +44,7 @@ jobs:
       run: cp "lib/junit-4.13.2.jar" .
 
     - name: Sair do diretório e voltar para a raiz
-      run: cd ../cd ..
+      run: cd ..
         ls -la
         pwd
         echo $GITHUB_WORKSPACE
