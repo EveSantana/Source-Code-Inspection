@@ -50,7 +50,7 @@ jobs:
         echo $GITHUB_WORKSPACE
         
     - name: Compile
-      working-directory: ./Codigo/src/
+      working-directory: ./Codigo/src
       run: javac -cp .:lib/junit-4.13.2.jar "Test/TicketMachineTest.java"
 
     - name: Run Unit Tests
