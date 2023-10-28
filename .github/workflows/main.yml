@@ -51,7 +51,7 @@ jobs:
         
     - name: Compile
       working-directory: ./Codigo/src/
-      run: javac -cp .:lib/junit-4.13.2.jar "Test/TicketMachineTest.java"
+      run: javac -cp .:lib/junit-4.13.2.jar "Test/Codigo/TicketMachineTest.java"
 
     - name: Run Unit Tests
       run: java -cp .:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TicketMachineTest
