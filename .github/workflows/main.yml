@@ -43,18 +43,14 @@ jobs:
     - name: Copy JUnit JAR to the workspace
       run: cp "lib/junit-4.13.2.jar" .
 
-    - name: Sair do diretório e voltar para a raiz
-      run: cd ..
-        ls -la
-        pwd
-        echo $GITHUB_WORKSPACE
-
     - name: Debug Info2
       run: |
         ls -la
         pwd
         echo $GITHUB_WORKSPACE
+        
     - name: Compile
+      working-directory: ./Codigo
       run: javac -cp .:lib/junit-4.13.2.jar "Test/TicketMachineTest.java"
 
     - name: Run Unit Tests
