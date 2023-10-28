@@ -1,5 +1,5 @@
 package Test;
-import br.calebe.ticketmachine.core.TicketMachine
+import br.calebe.ticketmachine.core.TicketMachine;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
