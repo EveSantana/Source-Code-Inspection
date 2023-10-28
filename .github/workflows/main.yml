@@ -44,6 +44,9 @@ jobs:
       run: cp "lib/junit-4.13.2.jar" .
     
     - name: Compile
+        ls -la
+        pwd
+        echo $GITHUB_WORKSPACE
       run: javac -cp .:lib/junit-4.13.2.jar "Codigo/src/Test/TicketMachineTest.java"
 
     - name: Run Unit Tests
