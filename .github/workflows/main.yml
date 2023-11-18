@@ -39,6 +39,12 @@ jobs:
       with:
         name: java-compiled
         path: compiled
+    - name: Debug Info
+      run: |
+        ls -R Codigo
+    - name: Debug Classpath
+      run: |
+        echo $CLASSPATH
 
     - name: Compilar os testes
       run: javac -cp .:lib/junit-4.13.2.jar Codigo/src/Test/Codigo/TicketMachineTest.java
