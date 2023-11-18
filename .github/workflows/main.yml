@@ -41,7 +41,6 @@ jobs:
         path: compiled
 
     - name: Compilar os testes
-      run: javac -cp .:lib/junit-4.13.2.jar Codigo/src/Test/Codigo/TicketMachineTest.java
-
+      run: javac -cp .:lib/junit-4.13.2.jar:Codigo Test/Codigo/TicketMachineTest.java
 
    
