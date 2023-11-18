@@ -24,7 +24,6 @@ jobs:
       run: javac -d target/classes -cp .:lib/junit-4.13.2.jar Codigo/src/br/calebe/ticketmachine/core/TicketMachine.java
 
     - name: Compilar os testes
-      run: javac -d target/test-classes -cp .:lib/junit-4.13.2.jar Codigo/src/Test/Codigo/TicketMachineTest.java
-
+      run: javac -d target/test-classes -cp .:lib/junit-4.13.2.jar:target/classes Codigo/src/Test/Codigo/TicketMachineTest.java
     - name: Executar testes JUnit
       run: java -cp .:lib/junit-4.13.2.jar:target/classes:target/test-classes org.junit.runner.JUnitCore Test.Codigo.TicketMachineTest
