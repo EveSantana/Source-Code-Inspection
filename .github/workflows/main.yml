@@ -20,9 +20,16 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Compilar o código principal
+    - name: Compilar o código do ticketmachine
       run: javac -d target/classes -cp .:lib/junit-4.13.2.jar:Codigo/src Codigo/src/br/calebe/ticketmachine/core/TicketMachine.java
     - name: Compilar os testes
       run: javac -d target/test-classes -cp .:lib/junit-4.13.2.jar:target/classes Codigo/src/Test/Codigo/TicketMachineTest.java
     - name: Executar testes JUnit
       run: javac -d target/test-classes -cp .:lib/junit-4.13.2.jar:target/classes Codigo/src/Test/Codigo/TicketMachineTest.java
+
+    - name: Compilar o código do papelmoeda
+      run: javac -d target/classes -cp .:lib/junit-4.13.2.jar:Codigo/src Codigo/src/br/calebe/ticketmachine/core/PapelMoeda.java
+    - name: Compilar os testes
+      run: javac -d target/test-classes -cp .:lib/junit-4.13.2.jar:target/classes Codigo/src/Test/Codigo/PapelMoedaTest.java
+    - name: Executar testes JUnit
+      run: javac -d target/test-classes -cp .:lib/junit-4.13.2.jar:target/classes Codigo/src/Test/Codigo/PapelMoedaTest.java
