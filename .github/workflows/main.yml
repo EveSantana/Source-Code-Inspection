@@ -23,6 +23,13 @@ jobs:
     - name: Compilar o código
       run: javac -d target/classes -cp .:lib/junit-4.13.2.jar Codigo/src/br/calebe/ticketmachine/core/TicketMachine.java
 
+    - name: Debug Info
+      run: |
+        echo "Conteúdo de target/classes:"
+        ls -R target/classes
+  
+        echo "Conteúdo de target/test-classes:"
+        ls -R target/test-classes
     - name: Compilar os testes
       run: javac -d target/test-classes -cp .:lib/junit-4.13.2.jar Codigo/src/Test/Codigo/TicketMachineTest.java
 
