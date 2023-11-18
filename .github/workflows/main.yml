@@ -3,54 +3,31 @@ name: main
 on:
   push:
     branches:
-      - master  # Substitua "main" pelo nome da sua branch principal, se necessário
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Você pode escolher outro sistema operacional, se preferir
+
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout do repositório
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
 
     - name: Configurar o JDK
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v2
       with:
-        distribution: 'temurin' # See 'Supported distributions' for available options
+        distribution: 'temurin'
         java-version: '17'
-    - name: Debug Info
-      run: |
-        ls -la
-        pwd
-        echo $GITHUB_WORKSPACE
-    - name: Sair do diretório e voltar para a raiz
-      run: cd ..
-    - name: Compilar o arquivo Java
-      run: javac "Codigo/src/br/calebe/ticketmachine/core/TicketMachine.java"  # Substitua "SeuArquivo.java" pelo nome do seu arquivo Java
 
-    - name: Enviar artefatos
-      run: |
-        mkdir -p compiled
-        mv *.class compiled/
-      continue-on-error: true
-
-    - name: Enviar artefatos para o GitHub
-      uses: actions/upload-artifact@v2
-      with:
-        name: java-compiled
-        path: compiled
-    - name: Debug Info
-      run: |
-        ls -R Codigo
-    - name: Debug Classpath
-      run: |
-        echo $CLASSPATH
+    - name: Compilar o código
+      run: javac -d target/classes -cp .:lib/junit-4.13.2.jar Codigo/src/br/calebe/ticketmachine/core/TicketMachine.java
 
     - name: Compilar os testes
-      run: java -cp .:lib/junit-4.13.2.jar:Codigo/src:Codigo/target/classes org.junit.runner.JUnitCore Test.Codigo.TicketMachineTest
+      run: javac -d target/test-classes -cp .:lib/junit-4.13.2.jar Codigo/src/Test/Codigo/TicketMachineTest.java
 
     - name: Executar testes JUnit
-      run: java -classpath .:lib/junit-4.13.2.jar:Codigo/target/classes:Codigo/target/test-classes org.junit.runner.JUnitCore Codigo.Test.Codigo.TicketMachineTest
-    - name: Debug Info
-      run: ls -R Codigo/target/classes
+      run: java -cp .:lib/junit-4.13.2.jar:target/classes:target/test-classes org.junit.runner.JUnitCore Test.Codigo.TicketMachineTest
+
+  
    
