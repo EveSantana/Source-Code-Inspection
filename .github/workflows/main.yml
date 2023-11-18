@@ -20,35 +20,11 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Compilar o código
+    - name: Compilar o código principal
       run: javac -d target/classes -cp .:lib/junit-4.13.2.jar Codigo/src/br/calebe/ticketmachine/core/TicketMachine.java
 
-    - name: Debug Info
-      run: |
-        echo "Conteúdo de target/classes:"
-        ls -R target/classes
-  
-        echo "Conteúdo de target/test-classes:"
-        ls -R target/test-classes
     - name: Compilar os testes
       run: javac -d target/test-classes -cp .:lib/junit-4.13.2.jar Codigo/src/Test/Codigo/TicketMachineTest.java
 
-    - name: Debug Info
-      run: |
-        echo "Conteúdo de target/classes:"
-        ls -R target/classes
-  
-        echo "Conteúdo de target/test-classes:"
-        ls -R target/test-classes
-        
     - name: Executar testes JUnit
       run: java -cp .:lib/junit-4.13.2.jar:target/classes:target/test-classes org.junit.runner.JUnitCore Test.Codigo.TicketMachineTest
-    - name: Debug Info
-      run: |
-        echo "Conteúdo de target/classes:"
-        ls -R target/classes
-  
-        echo "Conteúdo de target/test-classes:"
-        ls -R target/test-classes
-  
-   
