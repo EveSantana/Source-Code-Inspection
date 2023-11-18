@@ -50,7 +50,7 @@ jobs:
       run: java -cp .:lib/junit-4.13.2.jar:Codigo/src:Codigo/target/classes org.junit.runner.JUnitCore Test.Codigo.TicketMachineTest
 
     - name: Executar testes JUnit
-      run: java -cp .:lib/junit-4.13.2.jar:Codigo/src:Codigo/target/classes org.junit.runner.JUnitCore Test.Codigo.TicketMachineTest
+      run: java -cp .:lib/junit-4.13.2.jar:Codigo/target/classes:Codigo/target/test-classes org.junit.runner.JUnitCore Test.Codigo.TicketMachineTest
     - name: Debug Info
       run: ls -R Codigo/target/classes
    
