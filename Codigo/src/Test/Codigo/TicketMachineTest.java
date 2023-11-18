@@ -1,5 +1,5 @@
 package Test;
-import Codigo.src.br.calebe.ticketmachine.core.TicketMachine;
+import br.calebe.ticketmachine.core.TicketMachine;
 import static org.junit.Test;
 import static org.junit.Assert.*;
 
