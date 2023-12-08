@@ -25,7 +25,7 @@ jobs:
     - name: Compilar os testes
       run: javac -d target/test-classes -cp .:lib/junit-4.13.2.jar:target/classes Codigo/src/Test/Codigo/TicketMachineTest.java
     - name: Executar testes JUnit
-      run: java Codigo/src/Test/Codigo/TicketMachineTest.java
+      run: java Codigo/src/Test/Codigo/TicketMachineTest
 
     - name: Compilar o código do papelmoeda
       run: javac -d target/classes -cp .:lib/junit-4.13.2.jar:Codigo/src Codigo/src/br/calebe/ticketmachine/core/PapelMoeda.java
